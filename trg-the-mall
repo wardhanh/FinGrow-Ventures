@@ -1,65 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FinGrow Ventures | Pre-Launch Commercial Offer</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FinGrow Ventures – Pre-Launch Investment Opportunity</title>
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #f7f7f7;
+      background: #f7f7f7;
       color: #333;
     }
     header {
-      background-image: url('sample_combined_preview.jpg');
-      background-size: cover;
-      background-position: center;
-      height: 80vh;
+      background: url('hero.jpeg') no-repeat center center/cover;
+      height: 100vh;
       display: flex;
-      align-items: center;
+      flex-direction: column;
       justify-content: center;
-      color: white;
-      text-shadow: 2px 2px 4px #000;
+      align-items: center;
       text-align: center;
+      color: white;
+      position: relative;
+    }
+    header::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.6);
+    }
+    header h1, header h2, header p {
+      z-index: 2;
     }
     header h1 {
       font-size: 3em;
-      margin: 0;
+      margin-bottom: 10px;
     }
-    .content {
-      padding: 2em;
-      max-width: 900px;
+    header h2 {
+      font-size: 1.5em;
+      margin-bottom: 20px;
+    }
+    header .countdown {
+      font-size: 1.2em;
+      background: #fff;
+      padding: 10px 20px;
+      border-radius: 8px;
+      color: #111;
+      margin-top: 20px;
+      z-index: 2;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 1100px;
       margin: auto;
     }
-    .content h2 {
-      color: #d62e2e;
+    .highlight {
+      color: #e91e63;
+      font-weight: bold;
     }
     form {
+      display: flex;
+      flex-direction: column;
+      max-width: 500px;
+      margin: auto;
       background: white;
-      padding: 2em;
+      padding: 30px;
+      border-radius: 10px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      margin-top: 2em;
-      border-radius: 8px;
     }
-    input, textarea, button {
-      width: 100%;
-      padding: 0.75em;
-      margin-top: 1em;
-      border: 1px solid #ccc;
-      border-radius: 4px;
+    form input, form textarea {
+      margin: 10px 0;
+      padding: 10px;
       font-size: 1em;
     }
-    button {
-      background: #d62e2e;
-      color: white;
+    form button {
+      padding: 10px;
+      background: #e91e63;
       border: none;
+      color: white;
+      font-size: 1em;
       cursor: pointer;
     }
     footer {
       text-align: center;
-      padding: 2em;
-      font-size: 0.9em;
+      padding: 20px;
       background: #333;
       color: white;
     }
@@ -67,44 +90,68 @@
 </head>
 <body>
   <header>
-    <div>
-      <h1>Invest Smartly with FinGrow Ventures</h1>
-      <p>Grab Premium Retail Spaces | Save up to ₹42.35 Lakh | RERA Approved</p>
-    </div>
+    <h1>FinGrow Ventures</h1>
+    <h2>Luxury for Shoppers. Legacy for Brands.</h2>
+    <p>Save up to <span class="highlight">₹42.35 Lakh*</span> in our exclusive pre-launch commercial offer.</p>
+    <div class="countdown" id="countdown">Pre-Launch Offer ends in: Loading...</div>
   </header>
 
-  <div class="content">
-    <h2>Pre-Launch Offer | Retail Commercial Shops Near Gaur City & Crossing Republik</h2>
+  <section>
+    <h2>Why Invest Now?</h2>
     <ul>
-      <li>Limited Inventory Available on Ground & First Floor</li>
-      <li>High-Traffic Location | Food Court, Hypermarket, Multiplex, Gym</li>
-      <li>Pay Only 50% Now. 100% Refundable if Not Allotted*</li>
-      <li>RERA Approved: UPRERAPRJ378928/05/2025</li>
+      <li><strong>RERA Approved</strong> Commercial Project (Reg. No. UPRERAPRJ378928)</li>
+      <li><strong>Location:</strong> Near Crossing Republik & Gaur City</li>
+      <li><strong>Pricing starts:</strong> ₹18,990/Sq.Ft. (after pre-launch discount)</li>
+      <li><strong>Units Available:</strong> Retail | Hypermarket | Food Court | Gym | Entertainment</li>
+      <li><strong>Pre-Launch Offer:</strong> 50% Investment + First Come First Serve</li>
+      <li><strong>Site Address:</strong> TRG The Mall, Khasara No. 77MI, Dhundhera, Ghaziabad</li>
     </ul>
+  </section>
 
-    <form name="leadForm" id="leadForm">
-      <h3>Book Your Site Visit / Get Price Sheet</h3>
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="tel" name="phone" placeholder="Phone Number" required>
-      <input type="email" name="email" placeholder="Email Address" required>
-      <textarea name="message" placeholder="Any Message (Optional)"></textarea>
-      <button type="submit">Submit Inquiry</button>
+  <section>
+    <h2>Register for Details</h2>
+    <form name="leadForm">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="tel" name="phone" placeholder="Phone Number" required />
+      <input type="email" name="email" placeholder="Email Address" required />
+      <textarea name="message" placeholder="Message (optional)"></textarea>
+      <button type="submit">Submit</button>
     </form>
-  </div>
+  </section>
 
   <footer>
-    &copy; 2025 FinGrow Ventures | Powered by FinGrow Team
+    &copy; 2025 FinGrow Ventures. All rights reserved.
   </footer>
 
   <script>
-    const scriptURL = 'https://script.google.com/macros/s/YOUR_DEPLOYED_WEBAPP_URL/exec';
-    const form = document.forms['leadForm'];
+    // Countdown Timer: 60 days from today
+    const countdownEl = document.getElementById("countdown");
+    const endDate = new Date();
+    endDate.setDate(endDate.getDate() + 60);
 
+    function updateCountdown() {
+      const now = new Date();
+      const diff = endDate - now;
+      if (diff <= 0) {
+        countdownEl.textContent = "Pre-launch offer has ended.";
+        return;
+      }
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / (1000 * 60)) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
+      countdownEl.textContent = `Pre-Launch Offer ends in: ${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }
+    setInterval(updateCountdown, 1000);
+
+    // Submit to Google Sheets
+    const scriptURL = 'YOUR_GOOGLE_SCRIPT_URL_HERE';
+    const form = document.forms['leadForm'];
     form.addEventListener('submit', e => {
       e.preventDefault();
       fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-        .then(response => alert('Thanks! Your submission was successful.'))
-        .catch(error => alert('Something went wrong. Please try again!'));
+        .then(response => alert("Thanks! Your details have been submitted."))
+        .catch(error => alert("Oops! Something went wrong."))
     });
   </script>
 </body>
