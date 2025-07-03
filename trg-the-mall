@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FinGrow Ventures | Pre-Launch Commercial Offer</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f7f7f7;
+      color: #333;
+    }
+    header {
+      background-image: url('sample_combined_preview.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 2px 2px 4px #000;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 3em;
+      margin: 0;
+    }
+    .content {
+      padding: 2em;
+      max-width: 900px;
+      margin: auto;
+    }
+    .content h2 {
+      color: #d62e2e;
+    }
+    form {
+      background: white;
+      padding: 2em;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin-top: 2em;
+      border-radius: 8px;
+    }
+    input, textarea, button {
+      width: 100%;
+      padding: 0.75em;
+      margin-top: 1em;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1em;
+    }
+    button {
+      background: #d62e2e;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    footer {
+      text-align: center;
+      padding: 2em;
+      font-size: 0.9em;
+      background: #333;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <h1>Invest Smartly with FinGrow Ventures</h1>
+      <p>Grab Premium Retail Spaces | Save up to ₹42.35 Lakh | RERA Approved</p>
+    </div>
+  </header>
+
+  <div class="content">
+    <h2>Pre-Launch Offer | Retail Commercial Shops Near Gaur City & Crossing Republik</h2>
+    <ul>
+      <li>Limited Inventory Available on Ground & First Floor</li>
+      <li>High-Traffic Location | Food Court, Hypermarket, Multiplex, Gym</li>
+      <li>Pay Only 50% Now. 100% Refundable if Not Allotted*</li>
+      <li>RERA Approved: UPRERAPRJ378928/05/2025</li>
+    </ul>
+
+    <form name="leadForm" id="leadForm">
+      <h3>Book Your Site Visit / Get Price Sheet</h3>
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="tel" name="phone" placeholder="Phone Number" required>
+      <input type="email" name="email" placeholder="Email Address" required>
+      <textarea name="message" placeholder="Any Message (Optional)"></textarea>
+      <button type="submit">Submit Inquiry</button>
+    </form>
+  </div>
+
+  <footer>
+    &copy; 2025 FinGrow Ventures | Powered by FinGrow Team
+  </footer>
+
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/YOUR_DEPLOYED_WEBAPP_URL/exec';
+    const form = document.forms['leadForm'];
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => alert('Thanks! Your submission was successful.'))
+        .catch(error => alert('Something went wrong. Please try again!'));
+    });
+  </script>
+</body>
+</html>
